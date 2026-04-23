@@ -1,0 +1,60 @@
+import { MD3LightTheme, configureFonts } from 'react-native-paper';
+
+const fontConfig = {
+  displayLarge: { fontFamily: 'System', fontSize: 57, fontWeight: '400' as const, letterSpacing: 0 },
+  displayMedium: { fontFamily: 'System', fontSize: 45, fontWeight: '400' as const, letterSpacing: 0 },
+  displaySmall: { fontFamily: 'System', fontSize: 36, fontWeight: '400' as const, letterSpacing: 0 },
+  headlineLarge: { fontFamily: 'System', fontSize: 32, fontWeight: '400' as const, letterSpacing: 0 },
+  headlineMedium: { fontFamily: 'System', fontSize: 28, fontWeight: '400' as const, letterSpacing: 0 },
+  headlineSmall: { fontFamily: 'System', fontSize: 24, fontWeight: '400' as const, letterSpacing: 0 },
+  titleLarge: { fontFamily: 'System', fontSize: 22, fontWeight: '500' as const, letterSpacing: 0 },
+  titleMedium: { fontFamily: 'System', fontSize: 16, fontWeight: '500' as const, letterSpacing: 0.15 },
+  titleSmall: { fontFamily: 'System', fontSize: 14, fontWeight: '500' as const, letterSpacing: 0.1 },
+  bodyLarge: { fontFamily: 'System', fontSize: 16, fontWeight: '400' as const, letterSpacing: 0.5 },
+  bodyMedium: { fontFamily: 'System', fontSize: 14, fontWeight: '400' as const, letterSpacing: 0.25 },
+  bodySmall: { fontFamily: 'System', fontSize: 12, fontWeight: '400' as const, letterSpacing: 0.4 },
+  labelLarge: { fontFamily: 'System', fontSize: 14, fontWeight: '500' as const, letterSpacing: 0.1 },
+  labelMedium: { fontFamily: 'System', fontSize: 12, fontWeight: '500' as const, letterSpacing: 0.5 },
+  labelSmall: { fontFamily: 'System', fontSize: 11, fontWeight: '500' as const, letterSpacing: 0.5 },
+};
+
+export const theme = {
+  ...MD3LightTheme,
+  colors: {
+    ...MD3LightTheme.colors,
+    primary: '#1a56db',
+    primaryContainer: '#dbeafe',
+    secondary: '#6366f1',
+    secondaryContainer: '#e0e7ff',
+    tertiary: '#059669',
+    tertiaryContainer: '#d1fae5',
+    surface: '#ffffff',
+    surfaceVariant: '#f8fafc',
+    background: '#f1f5f9',
+    error: '#dc2626',
+    errorContainer: '#fef2f2',
+    onPrimary: '#ffffff',
+    onPrimaryContainer: '#1e3a5f',
+    onSecondary: '#ffffff',
+    onSecondaryContainer: '#312e81',
+    onTertiary: '#ffffff',
+    onSurface: '#0f172a',
+    onSurfaceVariant: '#475569',
+    onBackground: '#0f172a',
+    onError: '#ffffff',
+    outline: '#cbd5e1',
+    outlineVariant: '#e2e8f0',
+    elevation: {
+      level0: 'transparent',
+      level1: '#ffffff',
+      level2: '#f8fafc',
+      level3: '#f1f5f9',
+      level4: '#e2e8f0',
+      level5: '#cbd5e1',
+    },
+  },
+  fonts: configureFonts({ config: fontConfig }),
+  roundness: 12,
+};
+
+export type AppTheme = typeof theme;
